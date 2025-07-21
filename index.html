@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Apoio - Mamãe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Painel de Controle da Mamãe</h1>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>💊 Remédios para Hoje</h2>
+            <div id="remedios-hoje">
+                </div>
+        </section>
+
+        <section class="container">
+            <h2>🗓️ Próximas Consultas</h2>
+            <div id="proximas-consultas">
+                </div>
+        </section>
+
+        <section class="container forms-section">
+            <div class="form-container">
+                <h3>Adicionar Novo Remédio</h3>
+                <form id="form-add-remedio">
+                    <input type="text" id="remedio-nome" placeholder="Nome do Remédio" required>
+                    <input type="text" id="remedio-dosagem" placeholder="Dosagem (ex: 50mg)" required>
+                    <input type="text" id="remedio-horarios" placeholder="Horários (ex: 08:00, 20:00)" required>
+                    <input type="number" id="remedio-qtd" placeholder="Quantidade na caixa" required>
+                    <button type="submit">Adicionar Remédio</button>
+                </form>
+            </div>
+
+            <div class="form-container">
+                <h3>Agendar Nova Consulta</h3>
+                <form id="form-add-consulta">
+                    <input type="text" id="consulta-especialidade" placeholder="Especialidade" required>
+                    <input type="datetime-local" id="consulta-data" required>
+                    <input type="text" id="consulta-local" placeholder="Local da consulta" required>
+                    <button type="submit">Agendar Consulta</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
